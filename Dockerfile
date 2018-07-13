@@ -1,7 +1,5 @@
 FROM node:alpine
 
-LABEL maintainer "ictdba@wehkamp.nl"
-
 # Define the arguments
 ARG EXPRESS_PORT
 ARG HUBOT_SLACK_TOKEN
