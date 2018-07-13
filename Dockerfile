@@ -1,3 +1,6 @@
+# Build by:
+# $ docker build . -t bot-zero --build-arg HUBOT_SLACK_TOKEN=<your token>
+
 FROM node:alpine
 
 # Define the arguments
@@ -19,9 +22,6 @@ ENV HUBOT_SLACK_TOKEN=$HUBOT_SLACK_TOKEN
 
 # Build the hubot
 RUN npm install
-
-# Set the enviroment variables in .env file
-RUN echo JENKINS_API_TOKEN=$JENKINS_API_TOKEN >> .env
 
 # Start the hubot
 ENTRYPOINT ["/usr/local/bin/npm", "start"]
